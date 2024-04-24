@@ -41,10 +41,28 @@ public:
 
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Animation)
-	FLyraAnimLayerSelectionSet EquippedAnimSet;
+	FLyraAnimLayerSelectionSet EquippedAnimSet_TP;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Animation)
-	FLyraAnimLayerSelectionSet UneuippedAnimSet;
+	FLyraAnimLayerSelectionSet UneuqippedAnimSet_TP;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animation)
+	FLyraAnimLayerSelectionSet EquippedAnimSet_FP;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animation)
+	FLyraAnimLayerSelectionSet UneuqippedAnimSet_FP;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animation)
+	UAnimMontage* EquippedAnim_FP;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animation)
+	UAnimMontage* UneuqippedAnim_FP;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animation)
+	UAnimMontage* EquippedAnim_TP;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animation)
+	UAnimMontage* UneuqippedAnim_TP;
 
 	/**
 	 * Device properties that should be applied while this weapon is equipped.
@@ -54,9 +72,9 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Instanced, BlueprintReadOnly, Category = "Input Devices")
 	TArray<TObjectPtr<UInputDeviceProperty>> ApplicableDeviceProperties;
 	
-	// Choose the best layer from EquippedAnimSet or UneuippedAnimSet based on the specified gameplay tags
+	// Choose the best layer from EquippedAnimSet or UneuqippedAnimSet based on the specified gameplay tags
 	UFUNCTION(BlueprintCallable, BlueprintPure=false, Category=Animation)
-	TSubclassOf<UAnimInstance> PickBestAnimLayer(bool bEquipped, const FGameplayTagContainer& CosmeticTags) const;
+	virtual UPARAM(DisplayName="Container of animation laayers") TArray<TSubclassOf<UAnimInstance>> PickBestAnimLayer(bool bEquipped, const FGameplayTagContainer& CosmeticTags) const;
 
 	/** Returns the owning Pawn's Platform User ID */
 	UFUNCTION(BlueprintCallable)

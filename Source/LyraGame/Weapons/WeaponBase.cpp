@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
 #include "Weapons/WeaponBase.h"
+#include "Character/LyraCharacter.h"
 
 // Sets default values
 AWeaponBase::AWeaponBase()
@@ -18,7 +18,7 @@ AWeaponBase::AWeaponBase()
 	WeaponSkeletalMesh_TP->bCastHiddenShadow = true;
 
 	WeaponSkeletalMesh_FP = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("WeaponSkeletalMesh_FP"));
-	WeaponSkeletalMesh_FP->SetupAttacment(RootComponent);
+	WeaponSkeletalMesh_FP->SetupAttachment(RootComponent);
 	WeaponSkeletalMesh_TP->CastShadow = false;
 	WeaponSkeletalMesh_TP->bCastHiddenShadow = false;
 	WeaponSkeletalMesh_TP->SetOnlyOwnerSee(true);
@@ -28,6 +28,14 @@ AWeaponBase::AWeaponBase()
 void AWeaponBase::BeginPlay()
 {
 	Super::BeginPlay();
+
+	if (GetNetMode() != NM_DedicatedServer)
+	{
+		if (auto Character = Cast<ALyraCharacter>(GetOwner()))
+		{
+			WeaponSkeletalMesh_FP->AttachToComponent(Character->GetSkeletalMeshComponentFPS(), FAttachmentTransformRules::SnapToTargetIncludingScale, AttachSocket);
+		}
+	}
 	
 }
 

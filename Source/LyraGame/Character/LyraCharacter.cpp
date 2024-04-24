@@ -77,9 +77,9 @@ ALyraCharacter::ALyraCharacter(const FObjectInitializer& ObjectInitializer)
 	CameraComponent = CreateDefaultSubobject<ULyraCameraComponent>(TEXT("CameraComponent"));
 	CameraComponent->SetRelativeLocation(FVector(-300.0f, 0.0f, 75.0f));
 
-	MeshFPS = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("MeshFPS"));
-	MeshFPS->SetupAttachment(CameraComponent);
-	MeshFPS->SetOnlyOwnerSee(true);
+	SkeletalMeshComponentFPS = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("SkeletalMeshComponentFPS"));
+	SkeletalMeshComponentFPS->SetupAttachment(CameraComponent);
+	SkeletalMeshComponentFPS->SetOnlyOwnerSee(true);
 
 	bUseControllerRotationPitch = false;
 	bUseControllerRotationYaw = true;

@@ -33,6 +33,9 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category = Weapon)
 	USkeletalMeshComponent* WeaponSkeletalMesh_TP;
 
+	UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Category = Weapon)
+	FName AttachSocket = "None";
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

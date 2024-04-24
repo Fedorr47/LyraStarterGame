@@ -149,7 +149,7 @@ public:
 	virtual bool UpdateSharedReplication();
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Lyra|Character")
-	FORCEINLINE USkeletalMeshComponent* GetSkeletalMeshFPS() { return MeshFPS; }
+	FORCEINLINE USkeletalMeshComponent* GetSkeletalMeshComponentFPS() { return SkeletalMeshComponentFPS; }
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Lyra|Character")
 	float GetMoveSpeed() const;
@@ -199,7 +199,7 @@ private:
 
 	//TODO -> Rework to add a choice between meshes
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Lyra|Character", Meta = (AllowPrivateAccess = "true"))
-	USkeletalMeshComponent* MeshFPS;
+	USkeletalMeshComponent* SkeletalMeshComponentFPS;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Lyra|Character", Meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<ULyraPawnExtensionComponent> PawnExtComponent;
