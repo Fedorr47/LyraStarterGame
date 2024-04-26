@@ -1,0 +1,34 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\ue_projects\\lyrastartergame\\plugins\\commonloadingscreen\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\commonstartuploadingscreen\\module.commonstartuploadingscreen.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\ue_projects\\lyrastartergame\\intermediate\\build\\win64\\x64\\lyraeditor\\debuggame\\engine\\sharedpch.engine.nonoptimized.cpp20.h.pch",
+        "Includes": [
+            "d:\\ue_projects\\lyrastartergame\\plugins\\commonloadingscreen\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\commonstartuploadingscreen\\definitions.commonstartuploadingscreen.h",
+            "d:\\ue_projects\\lyrastartergame\\plugins\\commonloadingscreen\\source\\commonstartuploadingscreen\\private\\commonpreloadscreen.cpp",
+            "d:\\ue_projects\\lyrastartergame\\plugins\\commonloadingscreen\\source\\commonstartuploadingscreen\\private\\commonpreloadscreen.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\preloadscreen\\public\\preloadscreenbase.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\preloadscreen\\public\\preloadscreen.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\analytics\\analyticset\\public\\ianalyticsprovideret.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\analytics\\analyticset\\public\\analyticset.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\analytics\\analytics\\public\\analyticsproviderconfigurationdelegate.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\analytics\\analytics\\public\\interfaces\\ianalyticsprovidermodule.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\analytics\\analytics\\public\\analyticseventattribute.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\analytics\\analytics\\public\\analyticsconversion.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\analytics\\analytics\\public\\interfaces\\ianalyticsprovider.h",
+            "d:\\ue_projects\\lyrastartergame\\plugins\\commonloadingscreen\\source\\commonstartuploadingscreen\\private\\scommonpreloadingscreenwidget.h",
+            "d:\\ue_projects\\lyrastartergame\\plugins\\commonloadingscreen\\source\\commonstartuploadingscreen\\private\\commonstartuploadingscreen.cpp",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\preloadscreen\\public\\preloadscreenmanager.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\slate\\public\\widgets\\svirtualwindow.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\rendercore\\public\\tickableobjectrenderthread.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\preloadscreen\\public\\preloadslatethreading.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\applicationcore\\public\\hal\\platformapplicationmisc.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\applicationcore\\public\\windows\\windowsplatformapplicationmisc.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\applicationcore\\public\\genericplatform\\genericplatformapplicationmisc.h",
+            "d:\\ue_projects\\lyrastartergame\\plugins\\commonloadingscreen\\source\\commonstartuploadingscreen\\private\\scommonpreloadingscreenwidget.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

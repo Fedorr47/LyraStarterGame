@@ -1,0 +1,12 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-GameSubtitles-Win64-DebugGame.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\UE_projects\LyraStarterGame\LyraStarterGame\Intermediate\Build\Win64\x64\LyraEditor\DebugGame\Engine\SharedPCH.Engine.NonOptimized.Cpp20.h.obj"
+"D:\UE_projects\LyraStarterGame\LyraStarterGame\Plugins\GameSubtitles\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\GameSubtitles\Module.GameSubtitles.cpp.obj"
+"D:\UE_projects\LyraStarterGame\LyraStarterGame\Plugins\GameSubtitles\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\GameSubtitles\Default.rc2.res"
+/OUT:"D:\UE_projects\LyraStarterGame\LyraStarterGame\Plugins\GameSubtitles\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\GameSubtitles\UnrealEditor-GameSubtitles-Win64-DebugGame.lib"

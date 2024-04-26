@@ -1,0 +1,12 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-CommonLoadingScreen-Win64-DebugGame.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\UE_projects\LyraStarterGame\Intermediate\Build\Win64\x64\LyraEditor\DebugGame\Engine\SharedPCH.Engine.NonOptimized.Cpp20.h.obj"
+"D:\UE_projects\LyraStarterGame\Plugins\CommonLoadingScreen\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\CommonLoadingScreen\Module.CommonLoadingScreen.cpp.obj"
+"D:\UE_projects\LyraStarterGame\Plugins\CommonLoadingScreen\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\CommonLoadingScreen\Default.rc2.res"
+/OUT:"D:\UE_projects\LyraStarterGame\Plugins\CommonLoadingScreen\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\CommonLoadingScreen\UnrealEditor-CommonLoadingScreen-Win64-DebugGame.lib"
