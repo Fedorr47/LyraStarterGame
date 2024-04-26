@@ -80,8 +80,8 @@ TArray<TSubclassOf<UAnimInstance>> ULyraWeaponInstance::PickBestAnimLayer(bool b
 	TArray<TSubclassOf<UAnimInstance>> Ret;
 	const FLyraAnimLayerSelectionSet& SetToQuery_FP = (bEquipped ? EquippedAnimSet_FP : UneuqippedAnimSet_FP);
 	const FLyraAnimLayerSelectionSet& SetToQuery_TP = (bEquipped ? EquippedAnimSet_TP : UneuqippedAnimSet_TP);
-	Ret.Add(SetToQuery_TP.SelectBestLayer(CosmeticTags));
 	Ret.Add(SetToQuery_FP.SelectBestLayer(CosmeticTags));
+	Ret.Add(SetToQuery_TP.SelectBestLayer(CosmeticTags));
 	return Ret;
 }
 
