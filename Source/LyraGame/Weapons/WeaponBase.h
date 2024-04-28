@@ -36,6 +36,9 @@ protected:
 	UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Category = Weapon)
 	FName AttachSocket = "None";
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = WeaponRotation)
+	FRotator WeaponRotation{};
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

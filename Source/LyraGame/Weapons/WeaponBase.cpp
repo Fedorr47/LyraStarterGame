@@ -34,6 +34,7 @@ void AWeaponBase::BeginPlay()
 		if (auto Character = Cast<ALyraCharacter>(GetOwner()))
 		{
 			WeaponSkeletalMesh_FP->AttachToComponent(Character->GetSkeletalMeshComponentFPS(), FAttachmentTransformRules::SnapToTargetIncludingScale, AttachSocket);
+			WeaponSkeletalMesh_FP->AddRelativeRotation(WeaponRotation);
 		}
 	}
 	
