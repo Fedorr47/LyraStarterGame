@@ -35,6 +35,9 @@ void AWeaponBase::BeginPlay()
 		{
 			WeaponSkeletalMesh_FP->AttachToComponent(Character->GetSkeletalMeshComponentFPS(), FAttachmentTransformRules::SnapToTargetIncludingScale, AttachSocket);
 			WeaponSkeletalMesh_FP->AddRelativeRotation(WeaponRotation);
+
+			Character->SetCurrentWeapon(this);
+			Character->OnPlayerEquippedNewWeapon(WeaponCameraOffset);
 		}
 	}
 	

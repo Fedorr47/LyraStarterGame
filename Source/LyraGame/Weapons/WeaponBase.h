@@ -39,6 +39,9 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = WeaponRotation)
 	FRotator WeaponRotation{};
 
+	UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Category = Weapon)
+	float WeaponCameraOffset = 30.0f;
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

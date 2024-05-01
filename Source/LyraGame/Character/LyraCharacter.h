@@ -28,7 +28,7 @@ struct FFrame;
 struct FGameplayTag;
 struct FGameplayTagContainer;
 class ULyraSettingsShared;
-
+class AWeaponBase;
 
 /**
  * FLyraReplicatedAcceleration: Compressed representation of acceleration
@@ -152,8 +152,25 @@ public:
 	FORCEINLINE USkeletalMeshComponent* GetSkeletalMeshComponentFPS() { return SkeletalMeshComponentFPS; }
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Lyra|Character")
+	FORCEINLINE ULyraCameraComponent* GetCameraComponent() { return CameraComponent; }
+
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Lyra|Character")
 	float GetMoveSpeed() const;
 
+	// Weapon section start
+	UFUNCTION(BlueprintPure, Category = "Lyra|Character")
+	FORCEINLINE AWeaponBase* GetCurrentWeapon() const { return CurrentWeapon; }
+
+	UPROPERTY()
+	AWeaponBase* CurrentWeapon;
+
+	UFUNCTION(BlueprintCallable, Category = "Lyra|Character")
+	void SetCurrentWeapon(AWeaponBase* InCurrentWeapon);
+
+	UFUNCTION(BlueprintCallable, Category = "Lyra|Character")
+	void OnPlayerEquippedNewWeapon(float InWeaponOffset);
+
+	// Weapon section end
 protected:
 
 	virtual void OnAbilitySystemInitialized();
@@ -215,7 +232,6 @@ private:
 
 	UPROPERTY(Transient, ReplicatedUsing = OnRep_ReplicatedAcceleration)
 	FLyraReplicatedAcceleration ReplicatedAcceleration;
-
 	UPROPERTY(ReplicatedUsing = OnRep_MyTeamID)
 	FGenericTeamId MyTeamID;
 

@@ -7,7 +7,7 @@
 #include "LyraAnimInstance.generated.h"
 
 class UAbilitySystemComponent;
-
+class ALyraCharacter;
 
 /**
  * ULyraAnimInstance
@@ -43,4 +43,31 @@ protected:
 
 	UPROPERTY(BlueprintReadOnly, Category = "Character State Data")
 	float GroundDistance = -1.0f;
+
+#pragma region PROCEFURAL_IK
+
+public:
+	UPROPERTY(BlueprintReadOnly, Category = "Precedural IK")
+	ALyraCharacter* LyraCharacter = nullptr;
+
+	UPROPERTY(BlueprintReadOnly, Category = "Precedural IK")
+	FTransform RelativeHandTransform;
+
+	UPROPERTY(BlueprintReadOnly, Category = "Precedural IK")
+	FTransform SightTransform;
+
+	UFUNCTION(BlueprintCallable, Category = "Lyra|Character")
+	void OnNewWeaponEquipped(float InWeaponOffset);
+
+protected:
+	void SetSightTransform();
+	void SetRelativeHandTransform();
+
+private:
+
+	float SightOffset = 30.0f;
+
+	void FinalizeWeaponSync();
+
+#pragma endregion
 };

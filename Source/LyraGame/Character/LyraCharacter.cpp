@@ -18,6 +18,7 @@
 #include "Player/LyraLocalPlayer.h"
 #include "System/LyraSignificanceManager.h"
 #include "Settings/LyraSettingsShared.h"
+#include "Animation/LyraAnimInstance.h"
 #include "TimerManager.h"
 
 #include UE_INLINE_GENERATED_CPP_BY_NAME(LyraCharacter)
@@ -208,6 +209,22 @@ UAbilitySystemComponent* ALyraCharacter::GetAbilitySystemComponent() const
 float ALyraCharacter::GetMoveSpeed() const
 {
 	return AbilityMovementComponent ? AbilityMovementComponent->GetMoveSpeed() : 0.0f;
+}
+
+void ALyraCharacter::SetCurrentWeapon(AWeaponBase* InCurrentWeapon)
+{
+	CurrentWeapon = InCurrentWeapon;
+}
+
+void ALyraCharacter::OnPlayerEquippedNewWeapon(float InWeaponOffset)
+{
+	if (IsValid(SkeletalMeshComponentFPS))
+	{
+		if (ULyraAnimInstance* AnimInstance = Cast<ULyraAnimInstance>(SkeletalMeshComponentFPS->GetAnimInstance()))
+		{
+			AnimInstance->OnNewWeaponEquipped(InWeaponOffset);
+		}
+	}
 }
 
 void ALyraCharacter::OnAbilitySystemInitialized()
