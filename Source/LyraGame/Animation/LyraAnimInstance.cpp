@@ -84,7 +84,7 @@ void ULyraAnimInstance::OnNewWeaponEquipped(float InWeaponOffset)
 void ULyraAnimInstance::SetSightTransform()
 {
 	if (IsValid(LyraCharacter) &&
-		!LyraCharacter->IsLocallyControlled() &&
+		LyraCharacter->IsLocallyControlled() &&
 		LyraCharacter->GetNetMode() != NM_DedicatedServer)
 	{
 		const FTransform CameraTransform = LyraCharacter->GetCameraComponent()->GetComponentTransform();
@@ -99,7 +99,7 @@ void ULyraAnimInstance::SetSightTransform()
 void ULyraAnimInstance::SetRelativeHandTransform()
 {
 	if (IsValid(LyraCharacter) &&
-		!LyraCharacter->IsLocallyControlled() &&
+		LyraCharacter->IsLocallyControlled() &&
 		LyraCharacter->GetNetMode() != NM_DedicatedServer)
 	{
 		if (LyraCharacter->GetCurrentWeapon() != nullptr ||
